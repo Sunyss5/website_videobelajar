@@ -1,0 +1,86 @@
+/* ==========================================================================
+   RESET & BASE STYLES - VIDEOBELAJAR
+   Tujuan: Menghapus styling bawaan browser agar tampilan web konsisten,
+   bersih, dan 100% presisi sesuai desain Figma di semua jenis browser.
+   ========================================================================== */
+
+/* 1. Universal Box-Sizing & Reset Spacing (Paling Penting!)
+   - box-sizing: border-box -> Menjaga ukuran elemen tetap presisi sesuai Figma.
+     Padding dan border dihitung ke dalam wadah, bukan menambah lebar luar wadah.
+   - margin: 0 & padding: 0 -> Menghapus jarak/spasi putih bawaan browser di seluruh elemen. */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Pengaturan Dasar Halaman (HTML)
+   - scroll-behavior: smooth -> Animasi scroll halus saat mengklik link anchor (misal: menu navigasi #kategori).
+   - -webkit-text-size-adjust: 100% -> Mencegah perangkat mobile/iOS memperbesar ukuran teks secara otomatis saat orientasi layar diputar (landscape). */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 3. Pengaturan Dasar Tubuh Halaman (Body)
+   - font-family -> Menentukan jenis font default seluruh teks web (mengambil dari token Lato).
+   - color -> Warna teks standar (warna teks gelap dari token).
+   - background-color -> Warna latar belakang utama halaman web.
+   - line-height: 1.5 -> Jarak kerapatan antar baris kalimat agar teks nyaman dibaca.
+   - -webkit-font-smoothing dan -moz-osx-font-smoothing -> Membuat huruf/font terlihat lebih tajam dan halus di layar resolusi tinggi (Retina display/Mac).
+   - min-height: 100vh -> Menjamin tinggi body minimal setinggi 1 layar penuh monitor. */
+body {
+    font-family: var(--font-family-body, 'Lato', sans-serif);
+    color: var(--text-dark-primary);
+    background-color: var(--other-basebackground);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+/* 4. Reset Media & Gambar Responsif
+   - display: block -> Menghapus celah/gap spasi kosong kecil 3-4px di bawah gambar bawaan browser (inline).
+   - max-width: 100% -> Gambar tidak akan pernah melebar keluar dari batas wadah/card-nya.
+   - height: auto -> Proporsi perbandingan tinggi dan lebar gambar (rasio) tetap terjaga (gambar tidak gepeng). */
+img, picture, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Reset Tautan Link (<a>)
+   - color: inherit -> Warna link otomatis mengikuti warna teks di sekitarnya (tidak menjadi biru default browser).
+   - text-decoration: none -> Menghilangkan garis bawah default pada teks tautan link. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 6. Reset Elemen Formulir & Input
+   - font: inherit & color: inherit -> Membuat input, dropdown, dan tombol otomatis memakai font keluarga (Lato) dan warna teks yang sama seperti body (secara default browser memberi font jadul untuk input). */
+button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* 7. Reset Khusus Elemen Tombol (<button>)
+   - border: none & background: none -> Menghilangkan border 3D abu-abu dan latar abu-abu bawaan browser.
+   - cursor: pointer -> Mengubah kursor panah menjadi ikon jari tangan saat diarahkan ke tombol. */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* 8. Reset Daftar List (<ul> & <ol>)
+   - list-style: none -> Menghilangkan tanda titik peluru (bullet points) atau angka default pada list. */
+ul, ol {
+    list-style: none;
+}
+
+/* 9. Penanganan Kata Panjang (Typography Safety)
+   - overflow-wrap: break-word -> Memastikan kata yang sangat panjang (misal link URL panjang) otomatis turun ke baris baru dan tidak menembus batas layar. */
+h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+}
