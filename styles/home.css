@@ -1,0 +1,258 @@
+.main-container{
+    width: 100%;
+    padding-top: 64px;
+    padding-right: 120px;
+    padding-bottom: 64px;
+    padding-left: 120px;
+    gap: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--other-main-background);
+}
+
+.hero-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('../assets/hero-background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    padding: 60px 140px;
+    gap: 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content{
+    width: 100%;
+    max-width: 920px;
+    height: auto;
+    color:var(--text-light-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.course-container{
+    width: 100%;
+    height: auto;
+    min-height: 1525px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-header{
+    max-width: 623px;
+    width: 100%;
+    height: auto;
+    min-height: 67px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-header-title{
+    color: var(--text-dark-primary);
+}
+
+.course-header-desc{
+    color: var(--text-dark-secondary);
+}
+
+.course-tab {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+    max-width: 612px;
+    overflow-x: auto;
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    padding: 12px 0 12px 0;
+    color: var(--text-dark-secondary);
+    cursor: pointer;
+    position: relative; 
+    white-space: nowrap; 
+    transition: color 0.2s ease;
+}
+
+.tab-item:hover {
+    color: var(--tertiary-default);
+}
+
+.tab-item.active {
+    color: var(--tertiary-default); 
+    font-weight: 600; 
+}
+
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;            
+    height: 6px;        
+    background-color: var(--tertiary-default); 
+    border-radius: 10px 10px 0 0; 
+}
+
+.course-grid{
+    max-width: 1200px;
+    width: 100%;
+    min-height: 426px;
+    height: auto;
+    gap: 24px;
+    display: flex;
+}
+
+.card-container{
+    max-width: 384px;
+    width: 100%;
+    height: auto;
+    min-height: 426px;
+    gap: 16px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 20px;
+    background-color: var(--other-primary-background);
+    border-color: var(--other-border-background);
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-thumbnail{
+    max-width: 344px;
+    width: 100%;
+    min-height: 193px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-desc{
+    max-width: 344px;
+    width: 100%;
+    min-height: 74px;
+    height: auto;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-desc-title{
+    color: var(--text-dark-primary);
+}
+
+.card-desc-content{
+    color: var(--text-dark-secondary);
+    text-align: left;
+    width: 100%;
+    min-height: 44px;
+    height: auto;
+    text-align: left;
+}
+
+.card-instructor{
+    max-width: 344px;
+    width: 100%;
+    min-height: 42px;
+    height: auto;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-instructor-desc{
+    max-width: 294px;
+    width: 100%;
+    min-height: 42px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-instructor-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.card-instructor-name{
+    color: var(--text-dark-primary);
+}
+
+.card-instructor-role{
+    color: var(--text-dark-secondary);
+}
+.card-instructor-pt{
+    color: var(--text-dark-secondary);
+    cursor: pointer;
+}
+
+.card-bottom{
+    max-width: 344px;
+    width: 100%;
+    min-height: 29px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-rating {
+    max-width: 151px;
+    width: 100%;
+    min-height: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px; 
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.star {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.star.star-filled {
+    fill: var(--warning-default); 
+}
+
+.star.star-half {
+    fill: url(#half-grad);
+}
+
+.star.star-empty {
+    fill: var(--greyscale-300);
+}
+
+.card-rating-text{
+    color: var(--text-dark-secondary);
+}
+
+.card-price{
+    color:var(--primary-default)
+}

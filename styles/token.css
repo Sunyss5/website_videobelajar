@@ -31,10 +31,11 @@
     --text-light-disabled:rgba(193, 194, 196, 1);
 
     /* other/background*/
-    --other-primarybackground:rgba(255, 255, 255, 1);
-    --other-basebackground:rgba(244, 245, 250, 1);
-    --other-secondarybackground:rgba(249, 250, 252, 1);
-    --other-borderbackground:rgba(58, 53, 65, 0.12);
+    --other-primary-background:rgba(255, 255, 255, 1);
+    --other-base-background:rgba(244, 245, 250, 1);
+    --other-secondary-background:rgba(249, 250, 252, 1);
+    --other-border-background:rgba(58, 53, 65, 0.12);
+    --other-main-background:rgba(255, 253, 243, 1);
 
     /* info */
     --info-pressed:rgba(4, 74, 162, 1);

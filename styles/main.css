@@ -68,12 +68,12 @@
     line-height: var(--font-lineheight-body-large-medium);
     letter-spacing: var(--font-letterspacing-body-large-medium);
 }
-.body-large-reguler{
+.body-large-regular{
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-body-large-reguler);
-    font-weight: var(--font-weight-body-large-reguler);
-    line-height: var(--font-lineheight-body-large-reguler);
-    letter-spacing: var(--font-letterspacing-body-large-reguler);
+    font-size: var(--font-size-body-large-regular);
+    font-weight: var(--font-weight-body-large-regular);
+    line-height: var(--font-lineheight-body-large-regular);
+    letter-spacing: var(--font-letterspacing-body-large-regular);
 }
 
 
@@ -98,12 +98,12 @@
     line-height: var(--font-lineheight-body-medium-medium);
     letter-spacing: var(--font-letterspacing-body-medium-medium);
 }
-.body-medium-reguler{
+.body-medium-regular{
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-body-medium-reguler);
-    font-weight: var(--font-weight-body-medium-reguler);
-    line-height: var(--font-lineheight-body-medium-reguler);
-    letter-spacing: var(--font-letterspacing-body-medium-reguler);
+    font-size: var(--font-size-body-medium-regular);
+    font-weight: var(--font-weight-body-medium-regular);
+    line-height: var(--font-lineheight-body-medium-regular);
+    letter-spacing: var(--font-letterspacing-body-medium-regular);
 }
 
 
@@ -128,12 +128,12 @@
     line-height: var(--font-lineheight-body-small-medium);
     letter-spacing: var(--font-letterspacing-body-small-medium);
 }
-.body-small-reguler{
+.body-small-regular{
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-body-small-reguler);
-    font-weight: var(--font-weight-body-small-reguler);
-    line-height: var(--font-lineheight-body-small-reguler);
-    letter-spacing: var(--font-letterspacing-body-small-reguler);
+    font-size: var(--font-size-body-small-regular);
+    font-weight: var(--font-weight-body-small-regular);
+    line-height: var(--font-lineheight-body-small-regular);
+    letter-spacing: var(--font-letterspacing-body-small-regular);
 }
 
 .navbar-container{
@@ -141,7 +141,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: var(--other-basebackground);
+    background-color: var(--other-primary-background);
     width: 100%;
     height: 80px;
     border-bottom-width: 1px;
@@ -150,7 +150,7 @@
     padding-bottom: 12px;
     padding-left: 120px;
     gap: 36px;
-    border-color: var(--other-borderbackground);
+    border-color: var(--other-border-background);
     border-style: solid;
 }
 
@@ -185,4 +185,8 @@
 .kategori{
     color: var(--text-dark-secondary);
 }
+
+
+
+
 
