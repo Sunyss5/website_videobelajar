@@ -186,7 +186,129 @@
     color: var(--text-dark-secondary);
 }
 
+.footer-container {
+    background-color: var(--other-primary-background);
+    border-top: 1px solid var(--other-border-background);
+    padding: 60px 120px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 48px;
+}
 
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 352px;
+}
 
+.footer-logo {
+    width: 193px;
+    height: auto;
+}
 
+.footer-tagline {
+    color: var(--text-dark-primary);
+}
+
+.footer-address {
+    color: var(--text-dark-primary);
+    font-style: normal;
+}
+
+.footer-number {
+    color: var(--text-dark-primary);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 48px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 140px;
+}
+
+.footer-col-title {
+    color: var(--text-dark-primary);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li a {
+    color: var(--text-dark-secondary);
+    text-decoration: none;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-body-medium-regular);
+    font-weight: var(--font-weight-body-medium-regular);
+    transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-default);
+}
+
+.footer-divider {
+    width: 100%;
+    max-width: 1200px;
+    border: none;
+    border-top: 1px solid var(--other-border-background);
+    margin: 40px 0 24px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-copyright {
+    color: var(--text-dark-secondary);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--other-border-background);
+    color: var(--text-dark-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    border-color: var(--primary-default);
+    color: var(--primary-default);
+    background-color: var(--primary-100);
+}
