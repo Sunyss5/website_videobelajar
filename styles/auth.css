@@ -138,7 +138,7 @@
     content: "";
     width: 22px;
     height: 15px;
-    border: 1px solid var(--other-border-background);
+    border: 1px solid var(--other-primary-background);
     background: linear-gradient(to bottom, #FF0000 50%, #FFFFFF 50%);
 }
 
