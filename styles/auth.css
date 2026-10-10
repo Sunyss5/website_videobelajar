@@ -1,0 +1,227 @@
+/* ==================== AUTH (LOGIN & REGISTER) ==================== */
+.auth-main {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 64px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--other-main-background);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 590px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--other-primary-background);
+    border: 1px solid var(--other-border-background);
+    border-radius: 4px;
+}
+
+/* Header */
+.auth-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.auth-title {
+    color: var(--text-dark-primary);
+}
+
+.auth-subtitle {
+    color: var(--text-dark-secondary);
+}
+
+/* Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.auth-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-label {
+    color: var(--text-dark-secondary);
+}
+
+.form-required {
+    color: var(--error-default);
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    border: 1px solid var(--other-border-background);
+    border-radius: 6px;
+    background-color: var(--other-primary-background);
+    color: var(--text-dark-primary);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-medium-regular);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+    border-color: var(--primary-default);
+}
+
+/* Password (input + icon mata) */
+.form-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-password .form-input {
+    padding-right: 44px; /* ruang untuk icon */
+}
+
+.form-password-toggle {
+    position: absolute;
+    right: 12px;
+    display: inline-flex;
+    background: none;
+    border: none;
+    color: var(--text-dark-secondary);
+    cursor: pointer;
+}
+
+/* No. Hp (kode negara + nomor) */
+.form-phone {
+    display: flex;
+    gap: 24px;
+}
+
+.form-phone-code {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 140px;
+    height: 48px;
+    border: 1px solid var(--other-border-background);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.form-phone-flag {
+    width: 48px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--greyscale-100);
+    border-right: 1px solid var(--other-border-background);
+}
+
+/* Bendera Indonesia dibuat dengan CSS (merah-putih) */
+.form-phone-flag::before {
+    content: "";
+    width: 22px;
+    height: 15px;
+    border: 1px solid var(--other-border-background);
+    background: linear-gradient(to bottom, #FF0000 50%, #FFFFFF 50%);
+}
+
+.form-phone-code .form-select {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+/* Lupa Password */
+.auth-forgot {
+    align-self: flex-end;
+    color: var(--text-dark-secondary);
+    text-decoration: none;
+}
+
+.auth-forgot:hover {
+    color: var(--primary-default);
+}
+
+/* Tombol Masuk / Daftar */
+.auth-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-btn {
+    width: 100%;
+    text-decoration: none;
+}
+
+/* Divider "atau" */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark-secondary);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--other-border-background);
+}
+
+/* Tombol Google */
+.auth-google-btn {
+    width: 100%;
+    background-color: var(--other-primary-background);
+    border-color: var(--other-border-background);
+    color: var(--text-dark-secondary);
+}
+
+.auth-google-btn:hover {
+    background-color: var(--greyscale-50);
+}
+
+/* ==================== RESPONSIVE (MOBILE) ==================== */
+@media (max-width: 768px) {
+    .auth-main {
+        padding: 28px 20px;
+        align-items: flex-start;
+    }
+
+    .auth-card {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .auth-title {
+        font-size: var(--font-size-h4);
+    }
+
+    .form-phone {
+        gap: 12px;
+    }
+
+    .form-phone-code {
+        width: 120px;
+    }
+}
+
