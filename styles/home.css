@@ -1,3 +1,6 @@
+/* ==================== MAIN CONTAINER & HERO BANNER ==================== */
+
+/* Main Container Layout */
 .main-container{
     width: 100%;
     padding-top: 64px;
@@ -11,6 +14,7 @@
     background-color: var(--other-main-background);
 }
 
+/* Hero Banner Container */
 .hero-container{
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url('../assets/hero-background.jpg');
@@ -29,6 +33,7 @@
     justify-content: center;
 }
 
+/* Hero Content & Text */
 .hero-content{
     width: 100%;
     max-width: 920px;
@@ -41,15 +46,19 @@
     gap: 12px;
 }
 
+/* ==================== KOLEKSI VIDEO (COURSE SECTION) ==================== */
+
+/* Course Section Container */
 .course-container{
     width: 100%;
     height: auto;
-    min-height: 1525px;
+    min-height: auto;
     gap: 32px;
     display: flex;
     flex-direction: column;
 }
 
+/* Course Header Title & Subtitle */
 .course-header{
     max-width: 623px;
     width: 100%;
@@ -68,6 +77,7 @@
     color: var(--text-dark-secondary);
 }
 
+/* Tab Kategori Kursus */
 .course-tab {
     display: flex;
     align-items: center;
@@ -108,19 +118,21 @@
     border-radius: 10px 10px 0 0; 
 }
 
+/* Grid Kartu Kursus */
 .course-grid-container{
     width: 100%;
     height: auto;
-    min-height: 1525px;
+    min-height: auto;
     gap: 32px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
 }
 
+/* Kartu Kursus (Card Item) */
 .card-container{
     width: 100%;
     height: auto;
-    min-height: 426px;
+    min-height: auto;
     gap: 16px;
     border-radius: 10px;
     border-width: 1px;
@@ -132,6 +144,7 @@
     flex-direction: column;
 }
 
+/* Thumbnail Gambar */
 .card-thumbnail{
     width: 100%;
     min-height: 193px;
@@ -139,6 +152,7 @@
     border-radius: 10px;
 }
 
+/* Deskripsi & Judul Kursus */
 .card-desc{
     width: 100%;
     min-height: 74px;
@@ -161,6 +175,7 @@
     text-align: left;
 }
 
+/* Instruktur Kursus */
 .card-instructor{
     width: 100%;
     min-height: 42px;
@@ -198,6 +213,7 @@
     cursor: pointer;
 }
 
+/* Bagian Bawah Kartu (Rating & Harga) */
 .card-bottom{
     width: 100%;
     min-height: 29px;
@@ -218,6 +234,7 @@
     gap: 8px; 
 }
 
+/* Bintang Rating */
 .stars {
     display: flex;
     align-items: center;
@@ -251,6 +268,9 @@
     color:var(--primary-default)
 }
 
+/* ==================== NEWSLETTER CTA ==================== */
+
+/* Container CTA */
 .cta-container{
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url('../assets/cta-background.jpg');
@@ -269,6 +289,7 @@
     justify-content: center;
 }
 
+/* Konten Teks CTA */
 .cta-content{
     max-width: 525px;
     width: 100%;
@@ -318,4 +339,174 @@
 
 .cta-email-button {
     white-space: nowrap;
+}
+
+/* ==================== RESPONSIVE (MOBILE) ==================== */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 24px 20px;
+        gap: 32px;
+    }
+
+    /* Hero Banner Mobile */
+    .hero-container {
+        padding: 36px 20px;
+        min-height: auto;
+        border-radius: 8px;
+    }
+
+    .hero-content {
+        gap: 8px;
+    }
+
+    .hero-heading {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hero-desc {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .hero-button {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 13px;
+        height: auto;
+        text-align: center;
+    }
+
+    /* Course Section Mobile */
+    .course-header {
+        gap: 6px;
+    }
+
+    .course-tab {
+        gap: 20px;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+    }
+
+    .course-tab::-webkit-scrollbar {
+        display: none;
+    }
+
+    .course-grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        min-height: auto;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 85px 1fr;
+        grid-template-areas:
+            "thumb desc"
+            "thumb instructor"
+            "thumb bottom";
+        column-gap: 12px;
+        row-gap: 6px;
+        padding: 12px;
+        min-height: auto;
+        align-items: center;
+    }
+
+    .card-thumbnail {
+        grid-area: thumb;
+        width: 85px;
+        height: 85px;
+        min-height: 85px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-desc {
+        grid-area: desc;
+        min-height: auto;
+    }
+
+    .card-desc-title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .card-desc-content {
+        display: none;
+    }
+
+    .card-instructor {
+        grid-area: instructor;
+        min-height: auto;
+        gap: 8px;
+    }
+
+    .card-instructor-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .card-instructor-name {
+        font-size: 12px;
+    }
+
+    .card-instructor-role,
+    .card-instructor-pt {
+        font-size: 11px;
+    }
+
+    .card-bottom {
+        grid-area: bottom;
+        min-height: auto;
+    }
+
+    .card-rating-text {
+        font-size: 12px;
+    }
+
+    .card-price {
+        font-size: 16px;
+    }
+
+    /* CTA Newsletter Mobile */
+    .cta-container {
+        padding: 36px 20px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .cta-content-header {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cta-form-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        gap: 12px;
+    }
+
+    .cta-email-input {
+        flex: none;
+        width: 100%;
+        height: 40px;
+        background-color: var(--other-primary-background);
+        border: 1px solid var(--other-border-background);
+        border-radius: 8px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .cta-email-button {
+        width: 100%;
+        height: 44px;
+    }
+
+
+
 }

@@ -1,9 +1,13 @@
+/* ==================== IMPORTS ==================== */
 @import url(./token.css);
 @import url(./reset.css);
 @import url(./components.css);
 @import url(./home.css);
 @import url(./auth.css);
 
+/* ==================== TYPOGRAPHY (HEADING & BODY) ==================== */
+
+/* Heading Styles (H1 - H6) */
 .heading-1{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-h1);
@@ -47,6 +51,7 @@
     letter-spacing: var(--font-letterspacing-h6);
 }
 
+/* Body Large */
 .body-large-bold{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-large-bold);
@@ -76,7 +81,7 @@
     letter-spacing: var(--font-letterspacing-body-large-regular);
 }
 
-
+/* Body Medium */
 .body-medium-bold{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-medium-bold);
@@ -106,7 +111,7 @@
     letter-spacing: var(--font-letterspacing-body-medium-regular);
 }
 
-
+/* Body Small */
 .body-small-bold{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-small-bold);
@@ -136,6 +141,7 @@
     letter-spacing: var(--font-letterspacing-body-small-regular);
 }
 
+/* ==================== NAVBAR ==================== */
 .navbar-container{
     display: flex;
     flex-direction: row;
@@ -158,7 +164,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1120px;
+    width: 100%;
+    max-width: 1120px;
     height: 56px;
     justify-content: space-between;
 }
@@ -184,6 +191,10 @@
 
 .kategori{
     color: var(--text-dark-secondary);
+}
+
+.navbar-hamburger {
+    display: none;
 }
 
 .footer-container {
@@ -312,3 +323,120 @@
     color: var(--primary-default);
     background-color: var(--primary-100);
 }
+
+/* ==================== RESPONSIVE (MOBILE) ==================== */
+@media (max-width: 768px) {
+    /* Navbar Mobile Sesuai Frame Figma 360x74 */
+    .navbar-container {
+        padding: 16px 20px;
+        height: 74px;
+        justify-content: space-between;
+    }
+
+    .navbar-main {
+        width: auto;
+        height: auto;
+    }
+
+    .box-logo-videobelajar {
+        width: auto;
+        height: auto;
+    }
+
+    .logo-videobelajar {
+        width: 150px;
+        height: auto;
+    }
+
+    .kategori,
+    .profile-picture {
+        display: none;
+    }
+
+    .navbar-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-dark-primary);
+        padding: 4px;
+    }
+
+    /* Footer Mobile Sesuai Frame Figma 320x260 */
+    .footer-container {
+        padding: 40px 20px 28px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .footer-col {
+        width: 100%;
+        min-width: auto;
+        border-bottom: 1px solid var(--other-border-background);
+        padding: 14px 0;
+        gap: 0;
+    }
+
+    .footer-col-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        color: var(--text-dark-primary);
+    }
+
+    /* Ikon panah panah kanan (>) accordion */
+    .footer-col-title::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid var(--text-dark-secondary);
+        border-top: 2px solid var(--text-dark-secondary);
+        transform: rotate(45deg);
+        display: inline-block;
+    }
+
+    .footer-links {
+        display: none; /* Sublink disembunyikan di mobile sesuai Figma accordion */
+    }
+
+    .footer-divider {
+        margin: 24px 0 20px;
+    }
+
+    /* Bagian bawah footer: sosial media di atas, copyright di bawah */
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .footer-socials {
+        order: 1; /* Sosial media tampil di atas */
+    }
+
+    .footer-copyright {
+        order: 2; /* Copyright tampil di bawah */
+        color: var(--text-dark-secondary);
+    }
+}
+

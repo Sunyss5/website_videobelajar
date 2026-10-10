@@ -1,3 +1,6 @@
+/* ==================== BUTTON COMPONENTS ==================== */
+
+/* Button Base */
 .btn{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-medium-bold);
@@ -15,6 +18,7 @@
     cursor: pointer;
 }
 
+/* Button Variants: Primary */
 .button-primary-contained{
     color: var(--text-light-primary);
     background-color: var(--primary-default);
@@ -28,6 +32,8 @@
     background-color: var(--text-light-primary);
     border-color: var(--primary-default);
 }
+
+/* Button Variants: Secondary */
 .button-secondary-contained{
     color: var(--text-light-primary);
     background-color: var(--secondary-default);
@@ -41,6 +47,8 @@
     background-color: var(--text-light-primary);
     border-color: var(--secondary-default);
 }
+
+/* Button Variants: Disabled */
 .button-disabled-contained{
     color: var(--text-dark-disabled);
     background-color: var(--greyscale-400);
@@ -54,6 +62,10 @@
     background-color: var(--greyscale-200);
     border-color: var(--disabled-default);
 }
+
+/* ==================== CHIP & BADGE COMPONENTS ==================== */
+
+/* Chip Base */
 .chip{
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-small-regular);
@@ -172,6 +184,8 @@
     background-color: var(--greyscale-200);
     border-color: var(--greyscale-500);
 }
+
+/* ==================== FORM CONTROLS (CHECKBOX, RADIO, SWITCH) ==================== */
 
 /* Checkbox Component */
 .checkbox-container {
